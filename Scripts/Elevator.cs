@@ -70,13 +70,7 @@ public class ElevatorMotor : MonoBehaviour
             yield return StartCoroutine(DoorController());
             isInAction = false;
             StartCoroutine(MoveElevator());
-        }/*
-        else
-        {
-            yield return new WaitForSeconds(ActionTimeStep);
-            isInAction = false;
-            StartCoroutine(MoveElevator());
-        }*/
+        }
     }
 
     protected bool GetNewTargetStage()
