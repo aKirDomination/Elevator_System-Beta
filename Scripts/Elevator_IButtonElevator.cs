@@ -5,5 +5,4 @@ using UnityEngine;
 public interface IButtonElevator {
 
     void ConfigureButton(int ID);
-    void ButtonAction();
 }

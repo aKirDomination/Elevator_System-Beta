@@ -25,14 +25,4 @@ public class Elevator_UIInElevatorButtonController : MonoBehaviour, IButtonEleva
         if (StageText)
             StageText.text = ID.ToString();
     }
-
-    public void ChangeElevatorIconVisibility(bool isActive)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void ChangeDoorStatusVisibility(ElevatorMotor.DoorState doorState)
-    {
-        throw new System.NotImplementedException();
-    }
 }

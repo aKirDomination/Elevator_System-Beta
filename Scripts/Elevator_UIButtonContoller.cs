@@ -12,21 +12,18 @@ public class Elevator_UIButtonContoller : MonoBehaviour, IButtonElevator
     public Button ButtonDown;
     public GameObject Elevator;
     public Text ElevatorDoorStatus;
-    bool isUp = true;
 
     public void CallButtonUp()
     {
-        isUp = true;
-        ButtonAction();
+        ButtonAction(true);
     }
 
     public void CallButtonDown()
     {
-        isUp = false;
-        ButtonAction();
+        ButtonAction(false);
     }
 
-    public void ButtonAction()
+    public void ButtonAction(bool isUp)
     {
         Elevator_UIController.ElevatorObject.AddStageToQueue(StageID: StageID, isUp: isUp);
     }
@@ -61,5 +58,10 @@ public class Elevator_UIButtonContoller : MonoBehaviour, IButtonElevator
                 ElevatorDoorStatus.text = "[| |]";
                 break;
         }
+    }
+
+    public void ButtonAction()
+    {
+        throw new System.NotImplementedException();
     }
 }
